@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    background-image: url("../assets/background.jpg"); /* Sesuaikan nama file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animasi untuk teks */
+h1, p {
+    color: white;
+    opacity: 0; /* Awalnya transparan */
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: -30px; /* Naikkan teks sedikit */
+}
+
+p {
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+/* Tombol */
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* Efek transparan */
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Efek animasi muncul */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek muncul untuk konten tambahan */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.visible {
+    display: block;
+    opacity: 1;
+}
+body {
+    background: #000; /* Warna cadangan jika gambar tidak muncul */
+    background-image: url("../assets/background.jpg"); /* Pastikan path benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../assets/bekround.jpg"); /* Sesuaikan nama file */
+    background-size: cover;  /* Agar gambar memenuhi layar */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    height: 100vh; /* Supaya setinggi layar */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Jarak antara logo dan teks */
+    margin-top: 20px;
+}
+
+.logo {
+    width: 80px; /* Atur ukuran logo */
+    height: auto;
+}
